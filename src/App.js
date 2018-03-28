@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Route, withRouter } from "react-router-dom";
+
+import GettingStarted from './GettingStarted';
+import Description from './Description';
+import PriceRange from './PriceRange';
+import Results from './Results';
 
 class App extends Component {
   render() {
     return (
       <div> 
-        hello
+        <GettingStarted />
       </div>
     );
   }
