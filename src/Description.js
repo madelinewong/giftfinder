@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 
-class Description extends Component {
-    render() {
-        return(
+const Description = props => (
             <div>
                 please i'm begging you
             </div>
-        );
-    }
-}
+        )
 
 export default Description;

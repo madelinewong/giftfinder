@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
 
-class GettingStarted extends Component {
-    render() {
-        return (
+const GettingStarted = props => (
             <div>
                 oh my god just work
                 <p> </p>
-                <button onClick={this.props.changePlace}>pls</button>
+                <button onClick={() => props.changePlace('description')}>pls</button>
             </div>
-        );
-    }
-}
-
+        )
 export default GettingStarted;

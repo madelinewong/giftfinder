@@ -11,34 +11,25 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      location: "getting-started",
-      location: "description"
-    }
-    this.changePlace = this.changePlace.bind(this);
-    this.isClicked = this.isClicked.bind(this);
-  }
-  changePlace(e){
-    console.log("changing place");
-  }
-  isClicked(e){
-    console.log("clicked");
+      location: "getting-started"
+    };
+    this.changePlace = this.changePlace.bind(this);  }
+  changePlace(newLocation){
+    this.setState({
+      location: newLocation
+    });
   }
   render() {
     if (this.state.location === "getting-started") {
       return (
-        <div> <GettingStarted changePlace = {this.changePlace} /> </div>
+        <div> <GettingStarted changePlace={this.changePlace} /> </div>
       )
     }
-    if (this.isClicked === "description") {
+    if (this.state.location === "description") {
       return ( 
         <div> <Description changePlace = {this.changePlace} /> </div>
       )
     }
-    return (
-      <div> 
-        <Description />
-      </div>
-    );
   }
 }
 
