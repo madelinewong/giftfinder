@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './GettingStarted.css'
 
 const GettingStarted = props => (
             <div>

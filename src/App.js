@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 import { Route, withRouter } from "react-router-dom";
 
-import GettingStarted from './GettingStarted';
-import Description from './Description';
-import PriceRange from './PriceRange';
-import Results from './Results';
+import GettingStarted from './Client/GettingStarted';
+import Description from './Client/Description';
+import PriceRange from './Client/PriceRange';
+import Results from './Client/Results';
 
 class App extends Component {
   constructor(){
@@ -28,6 +28,16 @@ class App extends Component {
     if (this.state.location === "description") {
       return ( 
         <div> <Description changePlace = {this.changePlace} /> </div>
+      )
+    }
+    if (this.state.location === "priceRange") {
+      return (
+        <div> <PriceRange changePlace = {this.changePlace} /> </div>
+      )
+    }
+    if (this.state.location === "Results") {
+      return (
+        <div> <Results changePlace = {this.changePlace} /> </div>
       )
     }
   }

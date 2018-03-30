@@ -1,13 +1,9 @@
 import React, { Component } from 'react'; 
 
-class Results extends Component {
-    render(){
-        return (
+const Results = props => (
             <div>
                 god please just work
             </div>
         );
-    }
-}
 
 export default Results;
