@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const Results = props => (
             <div>
-                god please just work
+                Here's your results!
             </div>
         );
 

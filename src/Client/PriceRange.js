@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 const PriceRange = props => (
             <div>
-                pls
+                What's the price you're willing to spend?
                 <p></p>
-                <button onClick={() => props.changePlace('Results')}> pls only one more to go</button>
+                <button onClick={() => props.changePlace('Results')}> That's it!</button>
             </div>
         );
 

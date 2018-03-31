@@ -1,20 +1,22 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
 import { Route, withRouter } from "react-router-dom";
 
-import GettingStarted from './Client/GettingStarted';
-import Description from './Client/Description';
-import PriceRange from './Client/PriceRange';
-import Results from './Client/Results';
+import GettingStarted from "./Client/GettingStarted";
+import Description from "./Client/Description";
+import PriceRange from "./Client/PriceRange";
+import Results from "./Client/Results";
+import Layout from './Layout';
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {
       location: "getting-started"
     };
-    this.changePlace = this.changePlace.bind(this);  }
-  changePlace(newLocation){
+    this.changePlace = this.changePlace.bind(this);
+  }
+  changePlace(newLocation) {
     this.setState({
       location: newLocation
     });
@@ -22,23 +24,32 @@ class App extends Component {
   render() {
     if (this.state.location === "getting-started") {
       return (
-        <div> <GettingStarted changePlace={this.changePlace} /> </div>
-      )
+        <Layout>
+          {" "}
+          <GettingStarted changePlace={this.changePlace} />{" "}
+        </Layout>
+      );
     }
     if (this.state.location === "description") {
-      return ( 
-        <div> <Description changePlace = {this.changePlace} /> </div>
-      )
+      return (
+        <Layout>
+          <Description changePlace={this.changePlace} />{" "}
+        </Layout>
+      );
     }
     if (this.state.location === "priceRange") {
       return (
-        <div> <PriceRange changePlace = {this.changePlace} /> </div>
-      )
+        <Layout>
+          <PriceRange changePlace={this.changePlace} />{" "}
+        </Layout>
+      );
     }
     if (this.state.location === "Results") {
       return (
-        <div> <Results changePlace = {this.changePlace} /> </div>
-      )
+        <Layout>
+          <Results changePlace={this.changePlace} />{" "}
+        </Layout>
+      );
     }
   }
 }

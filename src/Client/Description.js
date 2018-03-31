@@ -3,10 +3,10 @@ import './Description.css';
 
 const Description = props => (
             <div>
-                please i'm begging you
+                Let's begin! How would you describe the person you're shopping for? (please only pick three don't be greedy)
                 <p>
                 </p>
-                <button onClick={() => props.changePlace('priceRange')}> please for the love of god work</button>
+                <button onClick={() => props.changePlace('priceRange')}> That's them!</button>
             </div>
         )
 

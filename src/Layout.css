@@ -1,0 +1,14 @@
+.layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner {
+    margin-top: 40px;
+    border: 10px solid #ff00c1;
+    background-color:#00b7ffd2;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 500px;
+}
